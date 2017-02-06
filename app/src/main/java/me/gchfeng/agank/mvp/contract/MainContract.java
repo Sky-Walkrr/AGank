@@ -13,7 +13,7 @@ public interface MainContract {
 
     }
 
-    interface MainModel extends IModel {
+    interface Model extends IModel {
 
     }
 }

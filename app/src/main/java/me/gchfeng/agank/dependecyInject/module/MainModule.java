@@ -5,6 +5,7 @@ import com.jess.arms.di.scope.ActivityScope;
 import dagger.Module;
 import dagger.Provides;
 import me.gchfeng.agank.mvp.contract.MainContract;
+import me.gchfeng.agank.mvp.model.MainModel;
 
 /**
  * Created by Walker on 2017/2/6.
@@ -25,7 +26,7 @@ public class MainModule {
 
     @Provides
     @ActivityScope
-    MainContract.MainModel provideModel(MainContract.MainModel mainModel) {
+    MainContract.Model provideModel(MainModel mainModel) {
         return mainModel;
     }
 }

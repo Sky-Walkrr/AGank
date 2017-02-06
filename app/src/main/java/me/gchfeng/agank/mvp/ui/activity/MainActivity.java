@@ -15,7 +15,7 @@ import me.gchfeng.agank.mvp.presenter.MainPresenter;
 public class MainActivity extends MyActivity<MainPresenter> implements MainContract.View{
     @Override
     protected void setupActivityComponent(AppComponent appComponent) {
-        
+
     }
 
     @Override

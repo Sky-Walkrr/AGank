@@ -13,7 +13,9 @@ import com.jess.arms.widget.imageloader.ImageLoader;
 import javax.inject.Singleton;
 
 import dagger.Component;
+import me.gchfeng.agank.dependecyInject.module.CacheModule;
 import me.gchfeng.agank.dependecyInject.module.ServiceModule;
+import me.gchfeng.agank.mvp.model.request.cache.CacheManager;
 import me.gchfeng.agank.mvp.model.request.service.ServiceManager;
 import me.jessyan.rxerrorhandler.core.RxErrorHandler;
 import okhttp3.OkHttpClient;
@@ -21,7 +23,7 @@ import okhttp3.OkHttpClient;
 
 @Singleton
 @Component(modules = {AppModule.class, ClientModule.class, ServiceModule.class, ImageModule.class,
-        GlobeConfigModule.class})
+        CacheModule.class,GlobeConfigModule.class})
 public interface AppComponent {
     Application Application();
 
@@ -29,8 +31,7 @@ public interface AppComponent {
     ServiceManager serviceManager();
 
     //缓存管理器
-    // TODO: 2017/2/6 暂未添加cache
-//    CacheManager cacheManager();
+    CacheManager cacheManager();
 
     //Rxjava错误处理管理类
     RxErrorHandler rxErrorHandler();

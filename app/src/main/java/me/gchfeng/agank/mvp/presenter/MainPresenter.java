@@ -11,10 +11,10 @@ import me.gchfeng.agank.mvp.contract.MainContract;
  * Created by Walker on 2017/2/6.
  */
 @ActivityScope
-public class MainPresenter extends BasePresenter<MainContract.MainModel,MainContract.View>{
+public class MainPresenter extends BasePresenter<MainContract.Model,MainContract.View>{
 
     @Inject
-    public MainPresenter(MainContract.MainModel model, MainContract.View rootView) {
+    public MainPresenter(MainContract.Model model, MainContract.View rootView) {
         super(model, rootView);
     }
 }
