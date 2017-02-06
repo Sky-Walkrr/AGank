@@ -29,5 +29,5 @@ public interface BaseView {
     /**
      * 杀死自己
      */
-    void killMyself();
+    void killSelf();
 }
