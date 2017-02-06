@@ -1,4 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+//引用config文件
+apply from: "config.gradle"
 
 buildscript {
     repositories {
@@ -15,6 +17,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url "https://jitpack.io" }//rxCache指定的仓库
     }
 }
 
