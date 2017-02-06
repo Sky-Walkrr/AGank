@@ -5,11 +5,11 @@ import com.jess.arms.mvp.Presenter;
 
 
 public abstract class MyActivity<P extends Presenter> extends BaseActivity<P> {
-    protected MyApplication mWeApplication;
+    protected MyApplication myApplication;
     @Override
     protected void ComponentInject() {
-        mWeApplication = (MyApplication) getApplication();
-        setupActivityComponent(mWeApplication.getAppComponent());
+        myApplication = (MyApplication) getApplication();
+        setupActivityComponent(myApplication.getAppComponent());
     }
 
     //提供AppComponent(提供所有的单例对象)给子类，进行Component依赖
@@ -18,6 +18,6 @@ public abstract class MyActivity<P extends Presenter> extends BaseActivity<P> {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        this.mWeApplication = null;
+        this.myApplication = null;
     }
 }
