@@ -15,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import me.gchfeng.agank.BuildConfig;
+import me.gchfeng.agank.dependecyInject.module.CacheModule;
 import me.gchfeng.agank.dependecyInject.module.ServiceModule;
 import me.gchfeng.agank.mvp.model.request.HttpUtils;
 import me.jessyan.rxerrorhandler.handler.listener.ResponseErroListener;
@@ -38,7 +39,7 @@ public class MyApplication extends BaseApplication {
                 .imageModule(getImageModule())//baseApplication提供
                 .globeConfigModule(getGlobeConfigModule())//全局配置
                 .serviceModule(new ServiceModule())//需自行创建
-//                .cacheModule(new CacheModule())//需自行创建
+                .cacheModule(new CacheModule())//需自行创建
                 .build();
 
         if (BuildConfig.LOG_DEBUG) {//Timber日志打印

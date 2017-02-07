@@ -6,5 +6,5 @@ package me.gchfeng.agank.mvp.model.request;
 
 public class HttpUtils {
 
-    public static final String APP_BASE_URL = "http://gank.io/api";
+    public static final String APP_BASE_URL = "http://gank.io/api/";
 }

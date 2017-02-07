@@ -13,7 +13,7 @@ import rx.Observable;
 public interface DataService {
     //http://gank.io/api/data/Android/10/1
 
-    @GET("/data/{type}/{count}/{page}")
+    @GET("data/{type}/{count}/{page}")
     Observable<ResponseObj> getData (@Path("type") String type,@Path("count") int count,@Path("page") int page);
 
 
