@@ -26,7 +26,7 @@ public class MainModule {
 
     @Provides
     @ActivityScope
-    MainContract.Model provideModel(MainModel mainModel) {
+    MainContract.Model provideModel(MainModel mainModel) {//avoid a dependency cycle here
         return mainModel;
     }
 }
