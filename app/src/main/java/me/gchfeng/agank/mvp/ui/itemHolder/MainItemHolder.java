@@ -1,5 +1,6 @@
 package me.gchfeng.agank.mvp.ui.itemHolder;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 
@@ -54,6 +55,22 @@ public class MainItemHolder extends BaseHolder<DataObj>{
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(RxTextView.text(tvTitle));
+        Observable.just(data)
+                .map(new Func1<DataObj, String>() {
+                    @Override
+                    public String call(DataObj dataObj) {
+                        return data.getWho();
+                    }
+                })
+                .filter(new Func1<String, Boolean>() {
+                    @Override
+                    public Boolean call(String s) {
+                        return !TextUtils.isEmpty(s);
+                    }
+                })
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(RxTextView.text(tvContent));
 //                .subscribe(new Action1<List<DataObj>>() {
 //                    @Override
 //                    public void call(List<DataObj> dataObjs) {

@@ -72,7 +72,9 @@ public class MainActivity extends MyActivity<MainPresenter> implements MainContr
 
     @Override
     public void initAdapter(DefaultAdapter adapter) {
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        setTitle(R.string.app_nick);//set actionbar title
     }
 }
