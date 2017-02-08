@@ -47,5 +47,6 @@ dependencies {
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
     apt rootProject.ext.dependencies["dagger2-apt-compiler"]//依赖apt插件
+    apt rootProject.ext.dependencies["butterknife-apt"]//依赖butterknife插件
     provided rootProject.ext.dependencies["javax.annotation"]//dagger2必须依赖jsr250 annotation
 }
